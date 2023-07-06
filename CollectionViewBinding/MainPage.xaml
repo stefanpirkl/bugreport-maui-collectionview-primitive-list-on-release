@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:ns="clr-namespace:CollectionViewBinding"
+             x:Class="CollectionViewBinding.MainPage"
+			 x:DataType="ns:MainPageViewModel">
+
+	<ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+			<CollectionView ItemsSource="{Binding Items}">
+				<CollectionView.ItemTemplate>
+					<DataTemplate>
+						<Label Text="{Binding}" />
+					</DataTemplate>
+				</CollectionView.ItemTemplate>
+			</CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
